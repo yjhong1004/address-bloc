@@ -230,4 +230,12 @@ RSpec.describe AddressBook do
             expect(entry).to be_nil
         end
     end
+
+    describe "#detonate_all_entries" do
+        it "should delete all entries" do
+          book.detonate_all_entries
+          expect(book.entires.size).to eq 0
+
+        end
+    end
 end

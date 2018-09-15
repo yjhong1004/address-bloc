@@ -71,12 +71,16 @@ class AddressBook
       # use an each loop to iterate over the @entries Array
       # use an if conditional: if the entry of the array is the name we're looking for,
       # return that name
-      #if not, then return nil. 
+      #if not, then return nil.
       @entries.each do |entry|
         if entry.name == name
           return entry
         end
       end
       return nil
+    end
+
+    def detonate_all_entries
+      @entries = []
     end
 end

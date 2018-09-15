@@ -16,7 +16,8 @@
      puts "3 - Search for an entry"
      puts "4 - Import entries from a CSV"
      puts "5 - View Entry number n"
-     puts "6 - Exit"
+     puts "6 - Detonate all entries"
+     puts "7 - Exit"
      print "Enter your selection: "
 
      # #3
@@ -46,6 +47,11 @@
          view_entry_number
          main_menu
        when 6
+         system "clear"
+         @address_book.detonate_all_entries
+         puts "All entries were deleted"
+         main_menu
+       when 7
          puts "Good-bye!"
          # #8
          exit(0)
@@ -226,7 +232,4 @@
          search_submenu(entry)
      end
    end
-
-
-
  end
